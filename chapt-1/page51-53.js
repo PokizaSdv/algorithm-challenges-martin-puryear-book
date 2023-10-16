@@ -141,8 +141,18 @@ for (let i = -300000; i <= 300000; i += 2) {
 console.log(finalSum);
 
 // 13.Countdown by Fours: Log positive numbers starting at 2016, counting down by fours (exclude 0), without a FOR loop.
-let num = 2016;
-while (num > 0) {
-    console.log(num);
-    num -= 4;
+let j = 2016;
+while (j > 0) {
+    console.log(j);
+    j -= 4;
+}
+
+// 14. Flexible Countdown:
+// Based on earlier “Countdown by Fours”, given lowNum, highNum, mult, print multiples of mult from highNum down to lowNum, using a FOR. For (2,9,3), print 9 6 3 (on successive lines).
+
+let lowNum = 2;
+let highNum = 9;
+let mult = 3;
+for (let i = lowNum; i <= highNum; i -= mult) {
+    console.log(i);
 }
