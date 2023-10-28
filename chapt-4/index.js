@@ -138,3 +138,6 @@ const romanToInt = (roman) => {
 console.log("_______________");
 console.log(romanToInt("III"));
 console.log(romanToInt("DCIX"));
+
+// Challenge answered: console.log(1 + 2 + "3" + "4" + 5 + 6) will output "33456". Num+num is a num, but num+str or str+num is a str: 1+2==3. 3+"3"=="33". "334"+5=="3345".
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
