@@ -67,7 +67,7 @@ console.log(shorterString(["abc", "defg", "a", "xy"], 3));
 
 //     return romans;
 //   };
-const intToRoman = (num) => {
+const intToRoman = (int) => {
     const romanNum = [
         "M",
         "CM",
@@ -87,9 +87,9 @@ const intToRoman = (num) => {
     const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
     let romans = "";
     for (let i = 0; i < romanNum.length; i++) {
-        while (num >= values[i]) {
+        while (int >= values[i]) {
             romans += romanNum[i];
-            num -= values[i];
+            int -= values[i];
         }
     }
     return romans;
@@ -101,3 +101,38 @@ console.log(intToRoman(4));
 console.log(intToRoman(21));
 console.log(intToRoman(444));
 console.log(intToRoman(1));
+
+// Roman Numerals to Integer Sept 16, 2014 headline: “Ancient Computer Found in Roman Shipwreck”. Comprising 30 bronze gears, its wooden frame features 2000 characters. Given a string containing a Roman numeral representation of a positive integer, return the integer. Remember that III is 3, DCIX is 609 and MXDII is 1492.
+
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
+
+const romanToInt = (roman) => {
+    const dic = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+
+    let result = 0;
+    let prevValue = 0;
+
+    for (let i = roman.length - 1; i >= 0; i--) {
+        const current = dic[roman[i]];
+        if (current >= prevValue) {
+            result += current;
+        } else {
+            result -= current;
+        }
+        prevValue = current;
+    }
+
+    return result;
+};
+
+console.log("_______________");
+console.log(romanToInt("III"));
+console.log(romanToInt("DCIX"));
