@@ -22,3 +22,18 @@ const countLetters = (str) => {
     return counter;
 };
 console.log(countLetters("Honey pie, you are driving me crazy"));
+
+// Remove Shorter Strings Given a string array and value (length), remove any strings shorter than length from the array.
+
+const shorterString = (arr, length) => {
+    // let result = [];
+    // for (const str of arr) {
+    //     if (str.length >= length) {
+    //         result.push(str);
+    //     }
+    // }
+    // return result;
+
+    return arr.filter((str) => str.length >= length);
+};
+console.log(shorterString(["abc", "defg", "a", "xy"], 3));
