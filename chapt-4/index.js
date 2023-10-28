@@ -121,13 +121,15 @@ const romanToInt = (roman) => {
     let prevValue = 0;
 
     for (let i = roman.length - 1; i >= 0; i--) {
-        const current = dic[roman[i]];
+        const current = dic[roman[i]]; //DCIX => X ; => I  ;    => C      vvv => D
         if (current >= prevValue) {
-            result += current;
+            // 10 > 0    ; => 1 > 10 ?;   => 100 > 9;b=> 500 > 109
+            result += current; // 0 + 10   ; => ?    ;  => 9 + 100;      => 109 + 500
         } else {
-            result -= current;
+            // ?      ;    => 1 < 10;  => 9 > 100 ?   => ?
+            result -= current; // ?     ;     => 10 - 1;   => ?          => ?
         }
-        prevValue = current;
+        prevValue = current; // prevValue = 10;  => prevValue = 9; => prevValue = 109  => prevValue = 609
     }
 
     return result;
