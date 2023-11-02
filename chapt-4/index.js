@@ -141,3 +141,36 @@ console.log(romanToInt("DCIX"));
 
 // Challenge answered: console.log(1 + 2 + "3" + "4" + 5 + 6) will output "33456". Num+num is a num, but num+str or str+num is a str: 1+2==3. 3+"3"=="33". "334"+5=="3345".
 // Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
+
+// String: Reverse Implement reverseString(str) that, given string, returns that string with characters reversed. Given "creature", return "erutaerc". Tempting as it seems, do not use the built-in reverse()!
+
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 143). Lulu.com. Kindle Edition.
+const reverseString = (str) => {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+};
+
+//  Remove Even-Length Strings Build a standalone function to remove strings of even lengths from a given array. For array containing ["Nope!","Its","Kris","starting","with","K!","(instead","of","Chris","with","C)","."], change that same array to ["Nope!","Its","Chris","."].
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
+
+function removeEvenLengthStr(arr) {
+    return arr.filter((str) => str.length % 2 !== 0);
+}
+let array = [
+    "Nope!",
+    "Its",
+    "Kris",
+    "starting",
+    "with",
+    "K!",
+    "(instead",
+    "of",
+    "Chris",
+    "with",
+    "C)",
+    "."
+];
+console.log(removeEvenLengthStr(array));
