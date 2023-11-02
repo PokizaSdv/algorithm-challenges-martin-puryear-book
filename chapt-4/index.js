@@ -1,42 +1,3 @@
-// Create a function that, given a string, returns the string’s acronym (first letters only, capitalized). Given " there's no free lunch  -  gotta pay yer way. ", return "TNFL-GPYW". Given "Live from New York, it's Saturday Night!", return "LFNYISN".
-
-const caplitalizeFirst = (str) => {
-    let words = str.split(" ");
-    let capitalized = [];
-    for (const word of words) {
-        capitalized.push(word[0].toUpperCase());
-    }
-    return capitalized.join("");
-};
-console.log(caplitalizeFirst("there's no free lunch - gotta pay yer way"));
-
-// Count Non-Spaces Accept a string and return the number of non-space characters found in the string. For example, given "Honey pie, you are driving me crazy", return 29 (not 35).
-
-const countLetters = (str) => {
-    let counter = 0;
-    for (const char of str) {
-        if (char !== " ") {
-            counter++;
-        }
-    }
-    return counter;
-};
-console.log(countLetters("Honey pie, you are driving me crazy"));
-
-// Remove Shorter Strings Given a string array and value (length), remove any strings shorter than length from the array.
-
-const shorterString = (arr, length) => {
-    // let result = [];
-    // for (const str of arr) {
-    //     if (str.length >= length) {
-    //         result.push(str);
-    //     }
-    // }
-    // return result;
-
-    return arr.filter((str) => str.length >= length);
-};
-console.log(shorterString(["abc", "defg", "a", "xy"], 3));
 
 // //  Integer to Roman Numerals Given a positive integer that is less than 4000, return a string containing that value in Roman numeral representation. In this representation, I is 1, V is 5, X is 10, L = 50, C = 100, D = 500, and M = 1000. Remember that 4 is IV, 349 is CCCIL and 444 is CDXLIV.
 
@@ -141,3 +102,36 @@ console.log(romanToInt("DCIX"));
 
 // Challenge answered: console.log(1 + 2 + "3" + "4" + 5 + 6) will output "33456". Num+num is a num, but num+str or str+num is a str: 1+2==3. 3+"3"=="33". "334"+5=="3345".
 // Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
+
+// String: Reverse Implement reverseString(str) that, given string, returns that string with characters reversed. Given "creature", return "erutaerc". Tempting as it seems, do not use the built-in reverse()!
+
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 143). Lulu.com. Kindle Edition.
+const reverseString = (str) => {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+};
+
+//  Remove Even-Length Strings Build a standalone function to remove strings of even lengths from a given array. For array containing ["Nope!","Its","Kris","starting","with","K!","(instead","of","Chris","with","C)","."], change that same array to ["Nope!","Its","Chris","."].
+// Puryear, Martin. Algorithm Challenges: The Dojo Collection (p. 144). Lulu.com. Kindle Edition.
+
+function removeEvenLengthStr(arr) {
+    return arr.filter((str) => str.length % 2 !== 0);
+}
+let array = [
+    "Nope!",
+    "Its",
+    "Kris",
+    "starting",
+    "with",
+    "K!",
+    "(instead",
+    "of",
+    "Chris",
+    "with",
+    "C)",
+    "."
+];
+console.log(removeEvenLengthStr(array));
