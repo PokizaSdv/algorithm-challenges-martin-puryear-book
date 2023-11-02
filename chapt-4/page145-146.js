@@ -25,9 +25,33 @@ console.log(isValidParentheses(input2)); // Output: false
 const input3 = "N(0)t )0(k";
 console.log(isValidParentheses(input3)); // Output: false
 
-console.log(isValidParentheses("(()))"))
-console.log(isValidParentheses("(())"))
+console.log(isValidParentheses("(()))"));
+console.log(isValidParentheses("(())"));
 
 //   -------------------------------------------------------
 
+// Braces Valid:
+//  Given a sequence of parentheses, braces and brackets, determine whether it is valid. Example: "W(a{t}s[o(n{ c}o)m]e )h[e{r}e]!" => true. "D(i{a}l[ t]o)n{e" => false. "A(1)s[O (n]0{t) 0}k" => false. Strings like "Able was I, ere I saw Elba" or "Madam, I'm Adam" could be considered palindromes, because (if we ignore spaces, punctuation and capitalization) the letters are the same when reading from the back to the front.
 
+function isValidSequence(str) {
+    const stack = [];
+    const opening = "{([";
+    const closing = "})]";
+
+    for (const ele of str) {
+        if (opening.includes(ele)) {
+            stack.push(ele);
+        } else if (closing.includes(ele)) {
+            const lastOpening = stack.pop();
+            if (opening.indexOf(lastOpening) !== closing.indexOf(ele)) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
+}
+console.log("______________________");
+console.log(isValidSequence("W(a{t}s[o(n{ c}o)m]e)h[e{r}e]!")); // Output: true
+console.log(isValidSequence("D(i{a}l[ t]o)n{e")); // Output: false
+console.log(isValidSequence("A(1)s[O (n]0{t) 0}k")); // Output: false
