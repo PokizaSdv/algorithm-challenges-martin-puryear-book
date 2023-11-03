@@ -22,3 +22,12 @@ const printAndReturn = (arr) => {
     return arr[1];
 };
 console.log(printAndReturn([1, 2]));
+
+// First Plus Length: Given an array, return the sum of the first value in the array, plus the array’s length. What happens if the array’s first value is not a number, but a string (like "what?") or a boolean (like false).
+
+function firstPlusLength(arr) {
+    return arr[0] + arr.length;
+}
+console.log(firstPlusLength([1, 2, 3]));
+console.log(firstPlusLength(["what?", 2, 3]));
+console.log(firstPlusLength([false, 2, 3]));
