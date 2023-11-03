@@ -9,3 +9,16 @@ const countdown = (number) => {
     return result;
 };
 console.log(countdown(5));
+// const howLong = countdown(5);
+// console.log(howLong.lenght)
+console.log(countdown(5).length);
+
+// ------------------------------------
+
+// Print and Return Your function will receive an array with two numbers. Print the first value, and return the second.
+
+const printAndReturn = (arr) => {
+    console.log(arr[0]);
+    return arr[1];
+};
+console.log(printAndReturn([1, 2]));
