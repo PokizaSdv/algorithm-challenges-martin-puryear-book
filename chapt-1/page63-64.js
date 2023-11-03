@@ -31,3 +31,19 @@ function firstPlusLength(arr) {
 console.log(firstPlusLength([1, 2, 3]));
 console.log(firstPlusLength(["what?", 2, 3]));
 console.log(firstPlusLength([false, 2, 3]));
+
+// -------------------------------------------
+
+// Values Greater than Second For [1,3,5,7,9,13], print values that are greater than its 2nd value. Return how many values this is.
+
+const greaterThanSecond = (arr) => {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[1]) {
+            console.log(arr[i]);
+            result.push(arr[i]);
+        }
+    }
+    return result.length;
+};
+console.log(greaterThanSecond([1, 3, 5, 7, 9, 13]));
