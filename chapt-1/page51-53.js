@@ -118,9 +118,9 @@ while (a <= 60000) {
 
 for (let i = start; i <= end; i++) {
     if (i % 5 === 0) {
-        console.log("Coding");
+        // console.log("Coding");
     } else if (i % 10 === 0) {
-        console.log("Dojo");
+        // console.log("Dojo");
     }
     // console.log(i);
 }
@@ -128,7 +128,7 @@ for (let i = start; i <= end; i++) {
 // 11. What Do You Know? Your function will be given an input parameter incoming. Please console.log this value.
 
 function printValue(input) {
-    console.log(input);
+    // console.log(input);
 }
 
 // 12. Whoa, That Sucker’s Huge…
@@ -138,12 +138,12 @@ for (let i = -300000; i <= 300000; i += 2) {
     finalSum += i;
 }
 
-console.log(finalSum);
+// console.log(finalSum);
 
 // 13.Countdown by Fours: Log positive numbers starting at 2016, counting down by fours (exclude 0), without a FOR loop.
 let j = 2016;
 while (j > 0) {
-    console.log(j);
+    // console.log(j);
     j -= 4;
 }
 
@@ -153,6 +153,20 @@ while (j > 0) {
 let lowNum = 2;
 let highNum = 9;
 let mult = 3;
-for (let i = lowNum; i <= highNum; i -= mult) {
+for (let i = highNum; i >= lowNum; i -= mult) {
     console.log(i);
 }
+
+//  The Final Countdown This is based on “Flexible Countdown”. The parameter names are not as helpful, but the problem is essentially identical; don’t be thrown off! Given 4 parameters (param1,param2,param3,param4), print the multiples of param1, starting at param2 and extending to param3. One exception: if a multiple is equal to param4, then skip (don’t print) it. Do this using a WHILE. Given (3,5,17,9), print 6,12,15 (which are all of the multiples of 3 between 5 and 17, and excluding the value 9).
+
+function printMultiples(param1, param2, param3, param4) {
+
+    while (param2 <= param3) {
+      if (param2 % param1 === 0 && param2 !== param4) {
+        console.log(param2);
+      }
+      param2++;
+    }
+  }
+  
+  printMultiples(3, 5, 17, 9);
