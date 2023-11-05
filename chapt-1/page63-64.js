@@ -47,3 +47,24 @@ const greaterThanSecond = (arr) => {
     return result.length;
 };
 console.log(greaterThanSecond([1, 3, 5, 7, 9, 13]));
+console.log("-------------------------------------");
+
+// ---------------------------------------------------
+
+// Values Greater than Second, Generalized: Write a function that accepts any array, and returns a new array with the array values that are greater than its 2nd value. Print how many values this is. What will you do if the array is only one element long?
+
+const greaterThanSecondGeneralized = (arr) => {
+    if (arr.length === 1) {
+        console.log("Array must have at least two elements.");
+        return [];
+    }
+    let secondValue = arr[1];
+    let result = arr.filter((value) => value > secondValue);
+    let count = result.length;
+    console.log("Number of values greater than the second value:", count);
+    return result;
+};
+
+greaterThanSecondGeneralized([1, 2, 3, 4, 5, 6]);
+greaterThanSecondGeneralized([10, 20, 30, 40]);
+greaterThanSecondGeneralized([1, 9, 7, 45, 68, 3, 5]);
