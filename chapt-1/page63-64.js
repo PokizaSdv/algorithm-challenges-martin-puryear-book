@@ -87,6 +87,22 @@ const createArray = (num1, num2) => {
 };
 console.log(createArray(3, 5));
 console.log(createArray(5, 7));
-console.log("-------------------------")
+console.log("-------------------------");
 
 // ---------------------------------------------
+
+// Fit the First Value: Your function should accept an array. If value at [0] is greater than array’s length, print "Too big!"; if value at [0] is less than array’s length, print "Too small!"; otherwise print "Just right!".
+
+const fitFirstValue = (arr) => {
+    if (arr[0] === arr.length) {
+        console.log("Just right!");
+    } else if (arr[0] > arr.length) {
+        console.log("Too Big!");
+    } else {
+        console.log("Too small!");
+    }
+};
+fitFirstValue([5, 1, 2, 3, 4]);
+fitFirstValue([7, 1, 2, 3, 4]);
+fitFirstValue([2, 1, 2, 3, 4]);
+console.log("-----------------------------");
