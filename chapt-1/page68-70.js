@@ -90,3 +90,17 @@ function evenAndOdds(arr) {
 console.log(evenAndOdds([1, 5, 3, 4]));
 console.log(evenAndOdds([2, 4, 6, 3]));
 console.log(evenAndOdds([1, 2, 3, 4]));
+console.log("---------------------------");
+
+// Increment the Seconds: Given arr, add 1 to odd elements ([1], [3], etc.), console.log all values and return arr.
+
+const incrementOdd = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            arr[i] += 1;
+        }
+        console.log(arr[i]);
+    }
+    return arr;
+};
+console.log(incrementOdd([1, 2, 3, 4, 5, 6]));
