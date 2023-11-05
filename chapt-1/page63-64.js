@@ -68,3 +68,25 @@ const greaterThanSecondGeneralized = (arr) => {
 greaterThanSecondGeneralized([1, 2, 3, 4, 5, 6]);
 greaterThanSecondGeneralized([10, 20, 30, 40]);
 greaterThanSecondGeneralized([1, 9, 7, 45, 68, 3, 5]);
+console.log("--------------------------------");
+
+// ---------------------------------------
+
+// This Length, That Value: Given two numbers, return array of length num1 with each value num2. Print "Jinx!" if they are same.
+// 3, 5 => [5, 5, 5]
+const createArray = (num1, num2) => {
+    let arr = [];
+    if (num1 === num2) {
+        console.log("Jinx");
+    } else {
+        for (let i = 0; i < num1; i++) {
+            arr.push(num2);
+        }
+    }
+    return arr;
+};
+console.log(createArray(3, 5));
+console.log(createArray(5, 7));
+console.log("-------------------------")
+
+// ---------------------------------------------
