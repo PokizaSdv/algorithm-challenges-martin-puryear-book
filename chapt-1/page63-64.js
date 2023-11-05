@@ -106,3 +106,12 @@ fitFirstValue([5, 1, 2, 3, 4]);
 fitFirstValue([7, 1, 2, 3, 4]);
 fitFirstValue([2, 1, 2, 3, 4]);
 console.log("-----------------------------");
+
+// Fahrenheit to Celsius: Kelvin wants to convert between temperature scales. Create fahrenheitToCelsius(fDegrees) that accepts a number of degrees in Fahrenheit, and returns the equivalent temperature as expressed in Celsius degrees. For review, Fahrenheit = (9/5 * Celsius) + 32.
+
+const fahrenheitToCelsius = (fDegrees) => {
+    let cDegrees = (fDegrees - 32) / (9 / 5);
+    return cDegrees;
+};
+console.log(fahrenheitToCelsius(100))
+console.log(fahrenheitToCelsius(68))
