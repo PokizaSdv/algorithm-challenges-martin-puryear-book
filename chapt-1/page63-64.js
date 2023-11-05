@@ -113,5 +113,25 @@ const fahrenheitToCelsius = (fDegrees) => {
     let cDegrees = (fDegrees - 32) / (9 / 5);
     return cDegrees;
 };
-console.log(fahrenheitToCelsius(100))
-console.log(fahrenheitToCelsius(68))
+console.log(fahrenheitToCelsius(100));
+console.log(fahrenheitToCelsius(68));
+console.log("---------------------------");
+
+//  Celsius to Fahrenheit: Create celsiusToFahrenheit(cDegrees) that accepts number of degrees Celsius, and returns the equivalent temperature expressed in Fahrenheit degrees. (optional) Do Fahrenheit and Celsius values equate at a certain number? Scientific calculation can be complex, so for this challenge just try a series of Celsius integer values starting at 200, going downward (descending), checking whether it is equal to the corresponding Fahrenheit value.
+
+const celsiusToFahrenheit = (cDegrees) => {
+    return (cDegrees * 9) / 5 + 32;
+};
+
+const checkEquivalence = () => {
+    let celsius = 200;
+    while (true) {
+        let fahrenheit = celsiusToFahrenheit(celsius);
+        if (celsius === fahrenheit) {
+            console.log("Celsius and Fahrenheit are equal at", celsius);
+            break;
+        }
+        celsius--;
+    }
+};
+checkEquivalence();
